@@ -1,0 +1,26 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+@import url('./styles/header.scss');
+@import url('./styles/search-block.scss');
+@import url('./styles/nav-blocks.scss');
+@import url('./styles/category-nav.scss');
+@import url('./styles/main-content.scss');
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  display: flex;
+  flex-direction: row;
+  @media(min-width: 1200px) {
+    flex-direction: column
+  }
+}
+a {
+  text-decoration: none;
+  color: #000000;
+}
+
+ul {
+  list-style-type: none;
+}

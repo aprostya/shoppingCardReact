@@ -1,0 +1,68 @@
+@import 'mixins.scss';
+@import 'common.scss';
+
+.header {
+    background-color: #e4e4e4;
+    &__content {
+        @include flex(flex, row, space-between);
+        @extend %content;  
+    }
+}
+
+.contacts-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    &__phone {
+        font-size: 18px;
+        color: #262626;
+    }
+    &__phone-region {
+        font-size: 12px;
+        margin-left: 5px;
+    }
+}
+
+.blog-link-item {
+    position: relative;
+    &::before {
+        content: '';
+        position: absolute;
+        background-image: url('../images/spritesheetHeader.png');
+        background-repeat: no-repeat;
+        display: block;
+    }
+}
+
+.blog-link-item {
+    &__star-logo::before {
+        width: 30px;
+        height: 31px;
+        background-position: -45px -5px;
+        left: -32px;
+        bottom: -7px;
+    }
+    &__youtube-logo::before {
+        width: 54px;
+        height: 22px;
+        background-position: -85px -5px;
+        left: -57px;
+        bottom: -3px;
+    }
+    &__efir-logo::before {
+        width: 30px;
+        height: 22px;
+        background-position: -5px -5px;
+        left: -35px;
+        bottom: -3px;
+    }
+}
+.blog-links {
+    display: flex;
+    flex-direction: row;
+    width: auto;
+    font-size: 14px;
+    li {
+        margin-right: 82px;
+    }
+}

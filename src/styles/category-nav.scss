@@ -1,0 +1,25 @@
+@import 'mixins.scss';
+@import 'common.scss';
+
+
+.category-block {
+    @extend %nav-blocks;
+    background-color: #fff;
+    &__content {
+        @extend %content;   
+        @include flex(flex, row, space-between);
+    }
+}
+
+.category-links-list{
+    @include flex(flex, row, space-between);
+    width: auto;
+    padding: 10px 0 10px 0;
+    margin: auto;
+    li {
+        margin-right: 37px;
+        a {
+            font-size: 14px;
+        }
+    }
+}

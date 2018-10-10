@@ -1,0 +1,23 @@
+@import 'mixins.scss';
+@import 'common.scss';
+
+
+.nav-block {
+    @extend %nav-blocks;
+    &__content {
+        @extend %content;   
+        @include flex(flex, row, space-between);
+    }
+}
+
+.nav-links-list {
+    @include flex(flex, row, space-between);
+    width: auto;
+    padding: 0;
+    li {
+        margin-right: 20px;
+        a {
+            font-size: 16px;
+        }
+    }
+}

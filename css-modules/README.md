@@ -143,7 +143,7 @@ my-app/
     App.css
     App.js
     App.test.js
-    index.scss
+    index.css
     index.js
     logo.svg
 ```

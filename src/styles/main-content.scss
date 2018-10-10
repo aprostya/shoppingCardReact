@@ -1,0 +1,102 @@
+@import 'mixins.scss';
+@import 'common.scss';
+
+
+.main-content {
+    @extend %content;
+    @include flex(flex, column, space-between);
+}
+
+.shopping_list-container {
+    @include flex(flex, column, space-between);
+}
+
+.shopping-card {
+    @include flex(flex, row, space-between);
+}
+
+.card-descr {
+    text-align: center;
+    &__title {
+        font-size: 22px;
+    }
+}
+
+.count-block {
+    @include flex(flex, row, center);
+}
+.good-info {
+    @include flex(flex, column, normal);
+    max-width: 20%;
+    overflow: hidden;
+}
+
+.good-info__title-block {
+    margin-bottom: 10px;
+    h4 {
+        font-size: 18px;
+    }
+}
+
+.shopping-card--close-state {
+    display: none;
+}
+
+
+.good-bold {
+    font-weight: bold;
+    color: #000;
+    font-size: 16px;
+}
+.good-code {
+    color: rgba(145, 145, 145, 0.8);
+    font-size: 14px;
+}
+.goods-item {
+    @include flex(flex, column, normal);
+}
+
+.image {
+    width: auto;
+    .good-picture {
+        max-width: 100%;
+    }
+}
+.good-descr, .good-code  {
+    margin-bottom: 22px;
+}
+.good-size {
+    margin-bottom: 4px;
+}
+
+.good-info__title-block--price {
+    align-self: center;
+}
+
+.good-descr--cancel {
+    display: inline-block;
+    width: 16px;
+    cursor: pointer;
+    align-self: center;
+    &::before {
+        content: "";
+        display: inline-block;
+        background-image: url('../images/cancel.png');
+        width: 16px;
+        height: 16px;
+    }
+}
+
+.count-goods {
+    outline: none;
+    border: none;
+    width: 20px;
+    text-align: center;
+}
+
+.count {
+    color: #8d8d8d;
+    width: 20px;
+    text-align: center;
+    cursor: pointer;
+}

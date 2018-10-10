@@ -1,0 +1,18 @@
+[
+    {
+        "id": "123",
+        "src": "https://image.ibb.co/cFJmPU/good_1.jpg",
+        "price": "2450"
+    },
+    {
+        "id": "456",
+        "src": "https://image.ibb.co/noho4U/goods_2.jpg",
+        "price": "2440"
+
+    },
+    {
+        "id": "789",
+        "src": "https://image.ibb.co/kUJ6r9/goods_3.jpg",
+        "price": "2460"
+    }
+]
