@@ -1,0 +1,123 @@
+@import 'mixins.scss';
+@import 'common.scss';
+
+.footer {
+    background-color: #2a2a2a;
+    border: 1px solid #b2b2b2;
+    &__content {
+        @include flex(flex, column, space-between);
+        @extend %content;  
+        margin: 0 auto;
+    }
+}
+.footer-social {
+    @include flex(flex, row, normal);
+    margin: 0 auto;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    p {
+        color: #fff;
+        font-size: 16px;
+        margin-right: 10px;
+    }
+
+}
+
+.social-btn {
+    display: inline-block;
+    width: 45px;
+    height: 45px;
+    border-radius: 40px;
+    margin: 0 5px;
+    font-size: 0;
+    vertical-align: top;
+    text-decoration: none;
+    border: 1px solid #a0a0a0;
+    background: #000000 url("../images/spritesheet__1.png") no-repeat center;
+  }
+
+
+
+  
+.social-btn-fb {
+    background-position: 2px -3px;
+  
+}
+.social-btn-vk {
+    background-position: 0 -213px;
+}
+.social-btn-inst {
+    background-position: -2px -56px;
+}
+.social-btn-odnokl {
+    background-position: 0 -322px;
+}
+.social-btn-prin {
+    background-position: -1px -163px;
+}
+.social-btn-hrt {
+    background-position: -3px -109px;
+}
+.social-btn-ytb {
+    background-position: -4px -267px;
+}
+
+.footer-main {
+    @include flex(flex, row, normal);
+    width: 100%;
+    margin: 0 auto;
+}
+.footer-block {
+    @include flex(flex, column, normal);
+    width: 100%;
+    color: #8a8a8a;
+    margin-left: 5px;
+    margin-right: 5px;
+    &__title {
+        color: #fff;
+        font-size: 18px;
+    }
+}
+.footer-block--contacts {
+    @include flex(flex, row, normal);
+    color: #fff;
+    font-size: 16px;
+    padding-top: 38px;
+}
+.footer-block-list {
+    @include flex(flex, column, normal);
+    padding: 0;
+    li {
+        margin-bottom: 19px;
+        a {
+            color: #fff;
+            opacity: 0.8;
+        }
+    }
+}
+
+.phone-number {
+    font-size: 30px;
+    margin: 0;
+}
+.phone-number-descr {
+    font-size: 14px;
+}
+.contact-block {
+    @include flex(flex, column, normal);
+    width: 253px;
+    margin-right: 39px;
+}
+.footer-logo {
+    margin-right: 30px;
+}
+
+.copyright {
+    color: #fff;
+    text-align: center;
+    margin: 0 auto;
+    font-size: 12px;
+    width: 50%;
+    padding-top: 60px;
+    padding-bottom: 60px;
+}

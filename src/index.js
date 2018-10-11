@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import ShopPage from './pages/ShopPage';
+import ShopPage from './components/ShopPage';
 import 'normalize.css';
 import './index.scss';
 import * as serviceWorker from './serviceWorker';

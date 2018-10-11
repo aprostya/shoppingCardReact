@@ -1,7 +1,6 @@
 import React from 'react';
 import Image from './Image';
 
-
 const flex = 'flex';
 const none = 'none';
 
@@ -28,6 +27,7 @@ export default class ShoppingCard extends React.Component {
     removeThis(obj){
         this.props.onRemoveCard(obj);
     }
+
     render() {
         return (
            <div className="shopping-card">
@@ -50,7 +50,7 @@ export default class ShoppingCard extends React.Component {
                     </div>
                 </div>
                 <div className ="good-info">    
-                    <span className="good-descr good-bold">{this.state.totalPrice}</span>
+                    <span className="good-descr good-descr--price good-bold">{this.state.totalPrice}</span>
                 </div>
                 <div className ="good-info"> 
                     <span className="good-descr good-descr--cancel good-bold" onClick={this.removeThis.bind(this, this.props.goodId)}></span>

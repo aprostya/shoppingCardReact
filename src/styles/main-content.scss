@@ -5,6 +5,7 @@
 .main-content {
     @extend %content;
     @include flex(flex, column, space-between);
+    padding-bottom: 100px;
 }
 
 .shopping_list-container {
@@ -13,13 +14,13 @@
 
 .shopping-card {
     @include flex(flex, row, space-between);
+    margin-bottom: 30px;
 }
 
 .card-descr {
-    text-align: center;
     @extend %title-custom;
     position: relative;
-    margin-top: 60px;
+    margin-top: 50px;
     margin-bottom: 50px;
     &__title {
        @extend %bind-title;
@@ -110,4 +111,141 @@
     width: 20px;
     text-align: center;
     cursor: pointer;
+}
+
+.shopping-cards-sections {
+    @include flex(flex, row, normal);
+    margin-bottom: 30px;
+}
+
+.shopping-cards-list {
+    @include flex(flex, row, space-between);
+    padding: 0;
+    width: 100%;
+    li {
+        width: 200px;
+        max-width: 200px;
+        margin-left: auto;
+        margin-right: auto;
+        font-size: 18px;
+
+    }
+}
+.shopping-item--center {
+    text-align: center;
+}
+
+.good-descr--price  {
+    text-align: center;
+}
+
+.shopping-item--price {
+    text-align: center;
+}
+.promocode-section {
+    display: inline-block;
+    margin-left: 20px;
+    &__text {
+        margin-top: 8px;
+    }
+}
+.promocode-input {
+    padding: 10px;
+    opacity: 0.7;
+    border: 1px solid #dadada;
+    width: 211px;
+    font-size: 14px;
+    &__btn {
+       @extend %button-order;
+    }
+}
+
+.promocode-input__btn:focus {
+    outline: none;
+}
+
+.order-section {
+    @include flex(flex, row, space-between);
+    align-items: flex-start;
+    position: relative;
+    border-top: 1px solid #d9d9d9;
+    padding-top: 30px;
+}
+.promocode-sale-section {
+    color: #ff6c00;
+}
+.bucket-sum-section, .promocode-sale-section, .order-all {
+    @include flex(flex, row, space-between);
+}
+.promocode-sum-text, .bucket-sum-text, .bucket-sum {
+    margin: 0;
+}
+
+.bucket-sum-section {
+    margin-bottom: 13px;
+    margin-top: 8px;
+}
+
+.bucket-section { 
+    width: 280px;
+    margin-right: 100px;
+}
+.order-all {
+    margin-top: 40px;
+}
+.button-order{
+    @include flex(flex, row, normal);
+    &__btn {
+    @extend %button-order;
+    background-color: #ff6c00;
+    opacity: 1;
+    margin-top: 24px;
+    margin-left: auto;
+}
+}
+
+.recommend-block-title {
+        @extend %title-custom;
+        position: relative;
+        margin-top: 50px;
+        margin-bottom: 20px;
+        h3 {
+            @extend %bind-title;
+            width: 300px;
+        }
+    }
+.recommend-block {
+    @include flex(flex, column, normal);
+}
+.recommend-items {
+    @include flex(flex, row, normal);
+    margin: 0 auto;
+    width: auto;
+}
+
+.recommend-item {
+    font-size: 16px;
+    text-align: center;
+    @include flex(flex, column, normal);
+    margin-right: 10px;
+    margin-left: 10px;
+    width: 100%;
+    &__image-container {
+        width: 277px;
+        height: 278px;
+        img {
+            max-width: 100%;
+            width: 100%;
+        }
+    }
+}
+.recommend-item-price {
+    font-weight: bold;
+    margin-top: 7px;
+}
+
+.recommend-item-descr {
+    margin-bottom: 0;
+    margin-top: 10px;
+    font-weight: normal;
 }

@@ -65,3 +65,11 @@
         padding-bottom: 6px;
 }
 
+.seek-block::after {
+    content: '';
+    display: inline-block;
+    width: 17px;
+    height: 17px;
+    background-image: url('../images/loopa.png');
+    margin-left: -17px;
+}

@@ -9,6 +9,7 @@
 }
 
 %title-custom{
+    text-align: center;
     &::before {
         content: "";
         display: inline-block;
@@ -28,4 +29,15 @@
     width: 200px;
     z-index: 10;
     background-color: #fff;
+}
+
+%button-order {
+    padding: 12px;
+    width: 150px;
+    border-radius: 20px;
+    background-color: #b7b7b7;
+    color: #fff;
+    opacity: 0.7;
+    font-size: 14px;
+    margin-left: 20px;
 }

@@ -17,13 +17,11 @@ export default class ShoppingCards extends React.Component {
                     size = {good.size}
                     color = {good.color}
                     price = {good.price}
-                    onRemoveCard={this.removeCard.bind(this)}
+                    onRemoveCard={this.removeCard.bind(this)
+                    }
                 />
             );
         });
-    }
-    onUpdateBucket() {
-        return (this.shoppingCardsJSX.length);
     }
     removeCard(obj){
         const list = this.shoppingCardsJSX ;
