@@ -2,17 +2,29 @@
     {
         "id": "123",
         "src": "https://image.ibb.co/cFJmPU/good_1.jpg",
-        "price": "2450"
+        "price": "2450",
+        "descr": "Платье-миди с расклешенной юбкой",
+        "code": "Код 820342321-1",
+        "size": "Размер: 44",
+        "color": "Цвет: синий"
     },
     {
         "id": "456",
         "src": "https://image.ibb.co/noho4U/goods_2.jpg",
-        "price": "2440"
+        "price": "2440",
+        "descr": "Туфли женские украшенные кружевными вставками",
+        "code": "Код: 13524-01",
+        "size": "Размер: 38",
+        "color": "Цвет: черный"
 
     },
     {
         "id": "789",
         "src": "https://image.ibb.co/kUJ6r9/goods_3.jpg",
-        "price": "2460"
+        "price": "2460",
+        "descr": "Платье-миди",
+        "code": "Код: 75039",
+        "size": "Размер: 46",
+        "color": "Цвет: белый"
     }
 ]

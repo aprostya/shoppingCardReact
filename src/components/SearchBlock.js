@@ -1,6 +1,6 @@
 import React from 'react';
 import main_logo from '../images/logo-main.png';
-
+import ShoppingCard from './ShoppingCard'
 class SeekBlock extends React.Component {
     render() {
         return (
@@ -13,7 +13,7 @@ class SeekBlock extends React.Component {
 export default class SearchBlock extends React.Component {
     constructor(props) {
         super(props);
-        this.spanObject = { userName: 'Анастасия', bucketItem: 4}
+        this.spanObject = { userName: 'Анастасия'};
     }
     render() {
         return (
@@ -27,7 +27,7 @@ export default class SearchBlock extends React.Component {
                     <a className="user-info__user-name" href="/">{this.spanObject.userName}</a>
                  </div>
                  <div className="user-info user-info--user-bucket">
-                     <a className="user-info__bucket" href="/">В корзине: <br/>{this.spanObject.bucketItem} товара</a>
+                     <a className="user-info__bucket" href="/" >В корзине: <br/> товара</a>
                  </div>
              </div>
            </div>

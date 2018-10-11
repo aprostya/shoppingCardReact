@@ -1,5 +1,7 @@
 import React from 'react';
 import Image from './Image';
+
+
 const flex = 'flex';
 const none = 'none';
 
@@ -21,20 +23,23 @@ export default class ShoppingCard extends React.Component {
       showItem() {
         const changeText = this.state.toggle == none ? flex : none;
         this.setState({ toggle: changeText });
-        // this.toggleClass();
       }
+    
+    removeThis(obj){
+        this.props.onRemoveCard(obj);
+    }
     render() {
         return (
-           <div className="shopping-card" style={{ display: this.state.toggle }}>
+           <div className="shopping-card">
                 <div className="good-info good-info--pic">
                         <Image src= {this.props.src} className="good-picture" alt = {this.props.className}/>
                 </div>
                 <div className ="good-info">
-                    <span className="good-descr good-bold">Платье-миди с расклешенной юбкой</span>
-                    <span className="good-code">820342321-1</span>
+                    <span className="good-descr good-bold">{this.props.descr}</span>
+                    <span className="good-code">{this.props.code}</span>
                     <div className="goods-item">
-                        <span className="good-bold good-size">Размер: 44</span>
-                        <span className="good-bold good-color">Цвет: синий</span>
+                        <span className="good-bold good-size">{this.props.size}</span>
+                        <span className="good-bold good-color">{this.props.color}</span>
                     </div>
                 </div>
                 <div className ="good-info">   
@@ -48,7 +53,7 @@ export default class ShoppingCard extends React.Component {
                     <span className="good-descr good-bold">{this.state.totalPrice}</span>
                 </div>
                 <div className ="good-info"> 
-                    <span onClick = {this.showItem} className="good-descr good-descr--cancel good-bold"></span>
+                    <span className="good-descr good-descr--cancel good-bold" onClick={this.removeThis.bind(this, this.props.goodId)}></span>
                 </div>
            </div>
         )

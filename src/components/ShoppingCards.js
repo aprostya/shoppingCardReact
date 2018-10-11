@@ -1,21 +1,41 @@
+import { sample } from 'rxjs/internal/operators';
 import React from 'react';
 import ShoppingCard from './ShoppingCard';
 import goods from './goods.json';
-import good_1 from '../images/good_1.jpg';
-import good_2 from '../images/goods_2.jpg';
-import good_3 from '../images/goods_3.jpg';
 
 export default class ShoppingCards extends React.Component {
-    render() {
-        const shoppingCardsJSX = goods.map((good) => {
+    constructor (props){
+        super(props);
+        this.shoppingCardsJSX = goods.map((good) => {
             return (
                 <ShoppingCard
                     key = {good.id }
+                    goodId = {good.id}
                     src = {good.src}
+                    descr = {good.descr}
+                    code = {good.code}
+                    size = {good.size}
+                    color = {good.color}
                     price = {good.price}
+                    onRemoveCard={this.removeCard.bind(this)}
                 />
             );
         });
-        return <div className = 'shopping-cards'>{shoppingCardsJSX}</div>;
+    }
+    onUpdateBucket() {
+        return (this.shoppingCardsJSX.length);
+    }
+    removeCard(obj){
+        const list = this.shoppingCardsJSX ;
+        for (let i = 0; i < list.length; i++){
+            if (list[i].key === obj){                
+                list.splice(i, 1);
+                break;
+            }
+        }
+        this.forceUpdate();     
+    }
+    render() {
+        return this.shoppingCardsJSX;
     }
 }
