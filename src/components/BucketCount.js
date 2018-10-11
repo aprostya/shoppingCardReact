@@ -32,7 +32,6 @@ export default  class BucketCount extends React.Component {
                     <div className="button-order">
                         <button type="submit" className="button-order__btn">Оформить заказ</button>
                     </div>
-
                 </div>       
             </div>   
         )
